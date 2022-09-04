@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <div id="aaa" class="alert-box">
+        <p id="title">알림창임</p>
+    </div>
+    <button  onclick="열기()">열기</button><br><br>
+    <button  onclick="닫기()">닫기</button><br><br>
+    <button  onclick="열고닫기('none');">열고닫기</button><br><br>
+    <button  onclick="열고닫기('block');">열고닫기</button><br><br>
+    <button  onclick="아이디알림창()">바꾸기1</button><br><br>
+    <button  onclick="비번알림창()">바꾸기2</button><br><br>
+    <button  onclick="아이디알림창()">버튼1</button>
+    <button  onclick="비번알림창()">버튼2</button><br><br>
+
+    
+    <script>
+        
+        function 열기(){
+            document.getElementById('aaa').style.display = 'block';
+        }
+        
+        function 닫기(){
+            document.getElementById('aaa').style.display = 'none';
+        }
+        
+        function 열고닫기(파라미터){
+            document.getElementById('aaa').style.display = 파라미터;
+        } 
+        
+        function 아이디알림창(){
+            document.getElementById('title').innerHTML = '아이디입력하셈';
+            document.getElementById('aaa').style.display = 'block';
+        }
+        
+        function 비번알림창(){
+            document.getElementById('title').innerHTML = '비번입력하셈';
+            document.getElementById('aaa').style.display = 'block';
+        }
+        
+    </script>
+
+</body>
+</html>
